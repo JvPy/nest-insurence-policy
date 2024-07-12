@@ -1,73 +1,68 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Nest Insurance Policy
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Overview
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Nest Insurance Policy is an API service built with NestJS for managing insurance policies. It provides a robust framework for creating, updating, querying, and validating insurance policies within an insurance context.
 
-## Description
+## Features
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- **Policy Management**: CRUD operations for insurance policies (Create, Read, Update, Delete).
+- **Validation**: Ensures policy data is valid before processing.
+- **Querying**: Flexible querying capabilities to retrieve policy details.
+
+## Architecture
+
+### Components:
+
+1. **Controllers**: Expose API endpoints to handle HTTP requests related to policy management.
+
+2. **Services**: Business logic layer responsible for processing policy data, applying validation rules, and interacting with repositories.
+
+3. **Repositories**: Data access layer (integrating with databases) to perform CRUD operations on policy data.
+
+4. **DTOs (Data Transfer Objects)**: Objects used to define the structure of data exchanged between clients and the server.
+
+5. **Middleware**: Implements cross-cutting concerns such as logging, error handling, and validation.
+
+### Technologies Used:
+
+- **NestJS**: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
+- **TypeScript**: Primary language for development, providing type safety and modern JavaScript features.
+- **MongoDB**: Chosen non-relational database for storing policy data.
+- **Jest**: Testing framework used for unit and integration testing to ensure code quality and reliability.
 
 ## Installation
 
-```bash
-$ npm install
-```
+Before starting the application, make sure to have docker installed, as we use docker to run mongoDB locally and Node version 16 (or [NVM](https://github.com/nvm-sh/nvm) and install node version 16)
 
-## Running the app
+To install and run Nest Insurance Policy locally, follow these steps:
 
-```bash
-# development
-$ npm run start
+1. Clone the repository:
 
-# watch mode
-$ npm run start:dev
+   ```
+   git clone https://github.com/JvPy/nest-insurence-policy.git
+   ```
 
-# production mode
-$ npm run start:prod
-```
+2. Navigate into the project directory:
 
-## Test
+   ```
+   cd nest-insurence-policy
+   ```
 
-```bash
-# unit tests
-$ npm run test
+3. Install dependencies:
 
-# e2e tests
-$ npm run test:e2e
+   ```
+   npm install
+   ```
 
-# test coverage
-$ npm run test:cov
-```
+4. Start the application:
 
-## Support
+   ```
+   npm run start
+   ```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+5. The application will be accessible at `http://localhost:3000`.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is licensed under the MIT License
